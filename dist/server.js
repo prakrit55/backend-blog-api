@@ -52,7 +52,7 @@ app.use(express.json()); // Parse JSON request bodies
 // Routes
 // app.use('/api/posts', postRoutes);
 // Connect to MongoDB
-var uri = "mongodb+srv://prakrit55new:vL0mS2aZTZsUmzYX@cluster0.efaovxn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+var uri = process.env;
 mongoose.connect(uri)
     .then(function () { return console.log("Connected to MongoDB..."); })
     .catch(function (err) { return console.error("Could not connect to MongoDB...", err); });
